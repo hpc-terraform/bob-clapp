@@ -72,6 +72,8 @@ resource "google_compute_instance" "webserver" {
     mkdir /web &&
     git clone https://github.com/rgclapp007/terraform-docker-web.git build
     gsutil cp ${var.config_path}/env /web/build/compose/.env
+    cd /web/build/compose &&
+    docker-compose  up -d
   EOT
 
   tags = ["http-server"]

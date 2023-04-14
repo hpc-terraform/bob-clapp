@@ -17,17 +17,14 @@ variable "zone" {
 variable "webname" {
   description = "Name of the webserver instance"
   type        = string
-  default     = "clapp-cluster"
 }
 variable "service_account" {
   description = "Sevice account to use"
   type        = string
-  default     = "provision-terraform@earth-clapp.iam.gserviceaccount.com"
 }
 variable "config_path" {
   description = "GCS path for configuration"
   type        = string
-  default     = "gs://clapp-bucket-tmp/examp"
 }
 
 
